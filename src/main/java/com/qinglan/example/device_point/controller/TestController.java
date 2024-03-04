@@ -78,4 +78,8 @@ public class TestController {
         String s = deviceRegSession.waitReceiveMsg(key);
         return s;
     }
+
+
+    
+    //firts commit
 }
