@@ -36,7 +36,6 @@ public class RegistRequestHandler extends SimpleChannelInboundHandler<DeviceInfo
     }
 
     /**
-     * 注册服务
      * Registration Service
      * @param ctx
      * @param msg
@@ -44,13 +43,13 @@ public class RegistRequestHandler extends SimpleChannelInboundHandler<DeviceInfo
      */
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, DeviceInfo.RegisterReq msg) throws Exception {
-        //存在则注册成功 可以改数据库查询
+        //If it exists, the registration is successful. You can change the database query.
         try {
             DeviceInfo.RegisterResponse.Builder response = DeviceInfo.RegisterResponse.newBuilder();
             boolean regFlag = false;
             if (uids.contains(msg.getUid())) {
                 response.setSeq(4);
-                // 0-成功 其它失败
+                // 0-success other failure
                 response.setResult(0);
                 regFlag = true;
                 DeviceRegSession.connect(ctx.channel(), msg.getUid());

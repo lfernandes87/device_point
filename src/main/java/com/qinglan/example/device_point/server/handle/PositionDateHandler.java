@@ -17,7 +17,6 @@ public class PositionDateHandler extends SimpleChannelInboundHandler<ServerLBSIn
 
 
     /**
-     * 轨迹
      * position
      * @param ctx
      * @param msg
@@ -30,7 +29,7 @@ public class PositionDateHandler extends SimpleChannelInboundHandler<ServerLBSIn
             ByteString data = msg.getData();
             byte[] r = data.toByteArray();
 
-            log.info("收到雷达轨迹数据------>{}", Arrays.toString(r));
+            log.info("Radar track data received------>{}", Arrays.toString(r));
         } finally {
             ReferenceCountUtil.release(msg);
         }

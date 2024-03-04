@@ -21,18 +21,18 @@ public class DeviceRegSession {
     public DeviceRegSession() {
         // TODO document why this constructor is empty
     }
-    //缓存通道
+    //cache channel
     private static Map<String, Channel> regSession = new ConcurrentHashMap<>();
 
     private static Map<ChannelId, String> channelInfo = new ConcurrentHashMap<>();
 
-    //判断是否注册
+    //Determine whether to register
     public Channel isReg(String uid) {
         return regSession.get(uid);
     }
 
     public static void connect(Channel channel, String uid){
-        //重复链接清除旧链接
+        //Duplicate links clear old links
         if(regSession.containsKey(uid)){
             Channel oldChannel = regSession.get(uid);
             channelInfo.remove(oldChannel.id());
@@ -57,7 +57,7 @@ public class DeviceRegSession {
     }
 
     /**
-     * 响应消息缓存
+     * Response message cache
      */
     public static Cache<String, BlockingQueue<String>> responseMsgCache = CacheBuilder.newBuilder()
             .maximumSize(50000)
@@ -66,17 +66,17 @@ public class DeviceRegSession {
 
 
     /**
-     * 等待响应消息
-     * @param key 消息唯一标识
+     * Wait for response message
+     * @param key Message unique identifier
      * @return ReceiveDdcMsgVo
      */
     public String waitReceiveMsg(String key) {
 //        System.out.println("waitReceiveMsg.size()->>>>>>>>>>>>>>>>>>>" + responseMsgCache.size());
         try {
-            //设置超时时间
+            //Set timeout
             String vo = Objects.requireNonNull(responseMsgCache.getIfPresent(key))
                     .poll(4000, TimeUnit.MILLISECONDS);
-            //删除key
+            // Delete key
             responseMsgCache.invalidate(key);
             return vo;
         } catch (Exception e) {
@@ -86,8 +86,8 @@ public class DeviceRegSession {
     }
 
     /**
-     * 初始化响应消息的队列
-     * @param key 消息唯一标识
+     * Initialize the queue for response messages
+     * @param key Message unique identifier
      */
     public void initReceiveMsg(String key) {
         responseMsgCache.put(key,new LinkedBlockingQueue<String>(1));
@@ -95,8 +95,8 @@ public class DeviceRegSession {
     }
 
     /**
-     * 设置响应消息
-     * @param key 消息唯一标识
+     * Set response message
+     * @param key Message unique identifier
      */
     public void setReceiveMsg(String key, String msg) {
 //        System.out.println("setReceiveMsg.size()->>>>>>>>>>>>>>>>>>>" + responseMsgCache.size());

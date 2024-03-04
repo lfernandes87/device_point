@@ -16,8 +16,7 @@ import java.util.Arrays;
 public class BreathDateHandler extends SimpleChannelInboundHandler<ServerLBSInfo.ObjectData> {
 
     /**
-     * 呼吸心率
-     * Respiratory heart rate
+     * respiratory heart rate
      * @param ctx
      * @param msg
      */
@@ -28,7 +27,7 @@ public class BreathDateHandler extends SimpleChannelInboundHandler<ServerLBSInfo
             ByteString data = msg.getData();
             byte[] r = data.toByteArray();
 
-            log.info("收到雷达breath rate数据------>{}", Arrays.toString(r));
+            log.info("Receive radar breath rate data------>{}", Arrays.toString(r));
         } finally {
             ReferenceCountUtil.release(msg);
         }

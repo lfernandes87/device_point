@@ -14,7 +14,6 @@ public class HeartMsgHandler extends SimpleChannelInboundHandler<ServerLBSInfo.C
 
 
     /**
-     * 服务心跳
      * server heart
      * @param ctx
      * @param msg

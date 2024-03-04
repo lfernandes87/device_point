@@ -25,7 +25,7 @@ public final class DeviceInfo {
 
     /**
      * <pre>
-     *硬件版本号
+     * Hardware version number
      * </pre>
      *
      * <code>string hwver = 2;</code>
@@ -33,7 +33,7 @@ public final class DeviceInfo {
     java.lang.String getHwver();
     /**
      * <pre>
-     *硬件版本号
+     * Hardware version number
      * </pre>
      *
      * <code>string hwver = 2;</code>
@@ -43,7 +43,7 @@ public final class DeviceInfo {
 
     /**
      * <pre>
-     *软件版本号
+     * Hardware version number
      * </pre>
      *
      * <code>string sfver = 3;</code>
@@ -51,7 +51,7 @@ public final class DeviceInfo {
     java.lang.String getSfver();
     /**
      * <pre>
-     *软件版本号
+      * Hardware version number
      * </pre>
      *
      * <code>string sfver = 3;</code>
@@ -61,7 +61,7 @@ public final class DeviceInfo {
 
     /**
      * <pre>
-     *附加信息
+      * Hardware version number
      * </pre>
      *
      * <code>string addon = 4;</code>
@@ -69,7 +69,7 @@ public final class DeviceInfo {
     java.lang.String getAddon();
     /**
      * <pre>
-     *附加信息
+      * Hardware version number
      * </pre>
      *
      * <code>string addon = 4;</code>
@@ -79,7 +79,7 @@ public final class DeviceInfo {
 
     /**
      * <pre>
-     *设备UID
+     * Equipment UID
      * </pre>
      *
      * <code>string uid = 5;</code>
@@ -87,7 +87,7 @@ public final class DeviceInfo {
     java.lang.String getUid();
     /**
      * <pre>
-     *设备UID
+     *Equipment UID
      * </pre>
      *
      * <code>string uid = 5;</code>
@@ -97,7 +97,7 @@ public final class DeviceInfo {
 
     /**
      * <pre>
-     *设备型号
+     * Device model
      * </pre>
      *
      * <code>string type = 6;</code>
@@ -105,7 +105,7 @@ public final class DeviceInfo {
     java.lang.String getType();
     /**
      * <pre>
-     *设备型号
+     * Device model
      * </pre>
      *
      * <code>string type = 6;</code>
@@ -115,7 +115,7 @@ public final class DeviceInfo {
 
     /**
      * <pre>
-     *设备名称
+     * Device name
      * </pre>
      *
      * <code>string name = 7;</code>
@@ -123,7 +123,7 @@ public final class DeviceInfo {
     java.lang.String getName();
     /**
      * <pre>
-     *设备名称
+     * Device name
      * </pre>
      *
      * <code>string name = 7;</code>
@@ -133,7 +133,7 @@ public final class DeviceInfo {
 
     /**
      * <pre>
-     *设备位置信息
+     * Device location information
      * </pre>
      *
      * <code>string location = 8;</code>
@@ -141,7 +141,7 @@ public final class DeviceInfo {
     java.lang.String getLocation();
     /**
      * <pre>
-     *设备位置信息
+     * Device location information
      * </pre>
      *
      * <code>string location = 8;</code>
@@ -151,8 +151,8 @@ public final class DeviceInfo {
   }
   /**
    * <pre>
-   *type = 3
-   *注册请求
+   * type = 3
+   * Registration request
    * </pre>
    *
    * Protobuf type {@code RegisterReq}
@@ -293,7 +293,7 @@ public final class DeviceInfo {
     private volatile java.lang.Object hwver_;
     /**
      * <pre>
-     *硬件版本号
+     * Hardware version number
      * </pre>
      *
      * <code>string hwver = 2;</code>
@@ -312,7 +312,7 @@ public final class DeviceInfo {
     }
     /**
      * <pre>
-     *硬件版本号
+     * Hardware version number
      * </pre>
      *
      * <code>string hwver = 2;</code>
@@ -335,7 +335,7 @@ public final class DeviceInfo {
     private volatile java.lang.Object sfver_;
     /**
      * <pre>
-     *软件版本号
+     * Software version number
      * </pre>
      *
      * <code>string sfver = 3;</code>
@@ -354,7 +354,7 @@ public final class DeviceInfo {
     }
     /**
      * <pre>
-     *软件版本号
+     * Software version number
      * </pre>
      *
      * <code>string sfver = 3;</code>
@@ -377,7 +377,7 @@ public final class DeviceInfo {
     private volatile java.lang.Object addon_;
     /**
      * <pre>
-     *附加信息
+     * Additional Information
      * </pre>
      *
      * <code>string addon = 4;</code>
@@ -396,7 +396,7 @@ public final class DeviceInfo {
     }
     /**
      * <pre>
-     *附加信息
+     * Additional Information
      * </pre>
      *
      * <code>string addon = 4;</code>
@@ -419,7 +419,7 @@ public final class DeviceInfo {
     private volatile java.lang.Object uid_;
     /**
      * <pre>
-     *设备UID
+     * Equipment UID
      * </pre>
      *
      * <code>string uid = 5;</code>
@@ -438,7 +438,7 @@ public final class DeviceInfo {
     }
     /**
      * <pre>
-     *设备UID
+     * equipment UID
      * </pre>
      *
      * <code>string uid = 5;</code>
@@ -461,7 +461,7 @@ public final class DeviceInfo {
     private volatile java.lang.Object type_;
     /**
      * <pre>
-     *设备型号
+     * Device model
      * </pre>
      *
      * <code>string type = 6;</code>
@@ -480,7 +480,7 @@ public final class DeviceInfo {
     }
     /**
      * <pre>
-     *设备型号
+     * Device model
      * </pre>
      *
      * <code>string type = 6;</code>

@@ -6,7 +6,6 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-@Slf4j
 @RestController
 @RequestMapping("/test")
 public class TestController {
@@ -23,7 +21,7 @@ public class TestController {
     DeviceRegSession deviceRegSession;
 
     /**
-     * 订阅设备数据
+     * Subscribe to device data
      * @param uid
      * @return  Subscription device data
      * @throws InterruptedException
@@ -50,7 +48,7 @@ public class TestController {
     }
 
     /**
-     * 获取设备属性
+     * Get device properties
      * @param uid
      * @return Device prop
      * @throws InterruptedException
@@ -71,7 +69,7 @@ public class TestController {
         ChannelFuture channelFuture = channel.writeAndFlush(buffer);
         channelFuture.addListener(new ChannelFutureListener() {
             public void operationComplete(ChannelFuture future) {
-                // 发送数据成功以后，再看看引用计数
+                // After sending the data successfully, check the reference count again.
                 System.out.println("after write and flush completed, buf.refCnt(): " + buffer.refCnt());
             }
         });
@@ -79,7 +77,4 @@ public class TestController {
         return s;
     }
 
-
-    
-    //firts commit
 }

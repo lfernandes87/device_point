@@ -16,7 +16,6 @@ public class CommonResHandle extends SimpleChannelInboundHandler<ServerLBSInfo.C
 
     DeviceRegSession deviceRegSession = SpringUtils.getBean(DeviceRegSession.class);
     /**
-     * 订阅返回
      * Subscription return
      * @param ctx
      * @param msg
